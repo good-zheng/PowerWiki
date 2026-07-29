@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![PowerWiki](https://img.shields.io/badge/PowerWiki-Git%E7%9F%A5%E8%AF%86%E5%BA%93-3370ff?style=for-the-badge)
+<img src="assets/powerwiki-logo.svg" alt="PowerWiki" width="360" />
+
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Node](https://img.shields.io/badge/Node.js->=14-339933?style=for-the-badge&logo=node.js&logoColor=white)
 
