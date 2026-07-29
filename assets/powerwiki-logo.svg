@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-labelledby="title desc">
+  <title id="title">PowerWiki</title>
+  <desc id="desc">The PowerWiki wordmark, with Power in dark navy and Wiki in blue.</desc>
+  <text x="16" y="104" fill="#182230" font-family="Inter, Avenir Next, Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="0">Power<tspan fill="#3370FF">Wiki</tspan></text>
+</svg>
