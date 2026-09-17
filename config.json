@@ -1,0 +1,20 @@
+{
+  "gitRepo": "https://github.com/good-zheng/goodzheng-dev-wiki",
+  "repoBranch": "main",
+  "mdPath": "",
+  "port": 80,
+  "title": "goodzheng wiki",
+  "description": "Blog",
+  "siteTitle": "wiki",
+  "siteDescription": "写笔记",
+  "siteUrl": "",
+  "autoSyncInterval": 180000,
+  "sortOrder": "modified",
+  "footer": {
+    "copyright": "© 2025 - 2026 goodzheng wiki · <a href=\"https://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener\">Demo ICP备00000000号</a>",
+    "poweredBy": "Powered by"
+  },
+  "pages": {
+    "home": "README.md"
+  }
+}

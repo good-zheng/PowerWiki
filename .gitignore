@@ -2,7 +2,7 @@
 node_modules/
 
 # Config (may contain sensitive info)
-config.json
+# config.json
 
 # Statistics data
 .stats.json
