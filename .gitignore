@@ -27,4 +27,5 @@ Thumbs.db
 *~
 
 # Optional lock file
+package-lock.json
 .access-log.json
