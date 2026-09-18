@@ -670,7 +670,8 @@ app.get('/stats', (req, res) => {
   res.send(localizedTemplate);
 });
 
-const PORT = config.port || 3150;
+// 端口优先级：环境变量 PORT（云托管平台可能注入）> config.json 的 port 字段 > 默认 3150
+const PORT = process.env.PORT || config.port || 3150;
 
 /**
  * 启动服务器

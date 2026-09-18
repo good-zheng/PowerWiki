@@ -16,7 +16,8 @@ services:
       - powerwiki_cache:/app/cache
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3150/"]
+      # 探测端口需与 config.json 的 port 字段一致，否则会被判定为不健康
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/"]
       interval: 30s
       timeout: 10s
       retries: 3

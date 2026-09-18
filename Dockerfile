@@ -7,7 +7,9 @@ FROM node:22-alpine
 WORKDIR /app
 
 # 安装 git（必需）：Wiki 内容依赖克隆/同步远程仓库，simple-git 与 git clone 均调用 git 二进制
-RUN apk add --no-cache git
+# 构建机位于腾讯云：将 Alpine 默认 CDN 替换为腾讯内网镜像源，避免 apk 下载缓慢（默认源实测约 8-9 分钟）
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencentyun.com/g' /etc/apk/repositories \
+    && apk add --no-cache git
 
 # 复制依赖清单并安装生产依赖（跳过 devDependencies，如 nodemon）
 COPY package*.json ./
@@ -25,7 +27,7 @@ ENV NODE_ENV=production \
     GIT_CACHE_DIR=/app/cache \
     CONFIG_PATH=/app/config.json
 
-# 暴露端口（实际监听端口以 config.json 的 port 字段为准）
+# 暴露端口（实际监听端口优先级：环境变量 PORT > config.json 的 port 字段 > 默认 3150）
 EXPOSE 80
 
 # 启动应用
