@@ -11,7 +11,7 @@
     "start:zh": "LANG=zh-CN node src/index.js",
     "build": "echo 'No build step required'",
     "docker:build": "docker build -t powerwiki .",
-    "docker:run": "docker run -d -p 3150:3150 --name powerwiki -v $(pwd)/config.json:/app/config.json:ro powerwiki",
+    "docker:run": "docker run -d --name powerwiki --restart unless-stopped -p 80:80 -v ./config.json:/app/config.json:ro -v powerwiki_data:/app/data -v powerwiki_cache:/app/cache powerwiki",
     "docker:stop": "docker stop powerwiki && docker rm powerwiki",
     "docker:logs": "docker logs -f powerwiki"
   },

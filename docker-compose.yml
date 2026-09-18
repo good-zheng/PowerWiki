@@ -4,7 +4,7 @@ services:
   powerwiki:
     build: .
     ports:
-      - "3150:3150"
+      - "80:80"
     environment:
       - NODE_ENV=production
       - DATA_DIR=/app/data
